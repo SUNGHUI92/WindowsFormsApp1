@@ -58,7 +58,11 @@ namespace WindowsFormsApp1
         private void metroTile6_Click(object sender, EventArgs e)
         {
             this.Visible = false;
+<<<<<<< HEAD
             Form21 form2 = new Form21();
+=======
+            Form2 form2 = new Form2();
+>>>>>>> 46697265644397bde82b45a8409a5ade6be299d1
             form2.Show();//9
         }
     }
