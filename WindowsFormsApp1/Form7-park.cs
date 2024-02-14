@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
     
         public Form7()
         {
-            InitializeComponent(); //test01
+            InitializeComponent(); //test03
         }
 
         private void Form7_Load(object sender, EventArgs e)
