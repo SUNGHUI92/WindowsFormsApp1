@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form12_han : Form
+    public partial class Form12 : MetroFramework.Forms.MetroForm
     {
-        public Form12_han()
+        public Form12()
         {
             InitializeComponent();
+        }
+
+        private void Form12_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
