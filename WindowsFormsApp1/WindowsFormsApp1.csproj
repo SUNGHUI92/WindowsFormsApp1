@@ -109,16 +109,16 @@
     <Compile Include="Form15-jo.Designer.cs">
       <DependentUpon>Form15-jo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4-KIM.cs">
+    <Compile Include="INPUTOUTPUT\Form4-KIM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4-KIM.Designer.cs">
+    <Compile Include="INPUTOUTPUT\Form4-KIM.Designer.cs">
       <DependentUpon>Form4-KIM.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5-KIM.cs">
+    <Compile Include="INPUTOUTPUT\Form5-KIM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5-KIM.Designer.cs">
+    <Compile Include="INPUTOUTPUT\Form5-KIM.Designer.cs">
       <DependentUpon>Form5-KIM.cs</DependentUpon>
     </Compile>
     <Compile Include="Form6-park.cs">
@@ -177,10 +177,10 @@
     <EmbeddedResource Include="Form15-jo.resx">
       <DependentUpon>Form15-jo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4-KIM.resx">
+    <EmbeddedResource Include="INPUTOUTPUT\Form4-KIM.resx">
       <DependentUpon>Form4-KIM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5-KIM.resx">
+    <EmbeddedResource Include="INPUTOUTPUT\Form5-KIM.resx">
       <DependentUpon>Form5-KIM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form6-park.resx">
