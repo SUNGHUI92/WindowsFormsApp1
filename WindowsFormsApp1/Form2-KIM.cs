@@ -23,12 +23,12 @@ namespace WindowsFormsApp1
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            //22
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //33
+            
         }
 
         private void button1_Click_1(object sender, EventArgs e)
