@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form2_1 : MetroFramework.Forms.MetroForm
+    public partial class Form21 : MetroFramework.Forms.MetroForm
     {
 
-        public Form2_1()
+        public Form21()
         {
             InitializeComponent();
         }
