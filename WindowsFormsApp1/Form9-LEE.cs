@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     {
         public Form9()
         {
-            InitializeComponent();
+            InitializeComponent();//2
         }
 
         private void Form9_Load(object sender, EventArgs e)
