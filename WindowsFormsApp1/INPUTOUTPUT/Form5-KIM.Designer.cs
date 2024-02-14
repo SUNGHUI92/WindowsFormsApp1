@@ -83,7 +83,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(291, 54);
+            this.label1.Location = new System.Drawing.Point(306, 54);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 19);
@@ -94,7 +94,11 @@
             // 
             this.last_time.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.last_time.Location = new System.Drawing.Point(334, 52);
+<<<<<<< HEAD
             this.last_time.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.last_time.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 0a3a39eb62b2f0ef8cf9b6facb28208ab332245a
             this.last_time.Name = "last_time";
             this.last_time.Size = new System.Drawing.Size(236, 25);
             this.last_time.TabIndex = 43;
@@ -103,7 +107,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(7, 56);
+=======
+            this.label2.Location = new System.Drawing.Point(22, 56);
+>>>>>>> 0a3a39eb62b2f0ef8cf9b6facb28208ab332245a
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 15);
@@ -114,7 +122,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+<<<<<<< HEAD
             this.label3.Location = new System.Drawing.Point(596, 56);
+=======
+            this.label3.Location = new System.Drawing.Point(611, 56);
+>>>>>>> 0a3a39eb62b2f0ef8cf9b6facb28208ab332245a
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 15);
@@ -146,14 +158,23 @@
             this.company,
             this.productType,
             this.etc});
+<<<<<<< HEAD
             this.dataGridView1.Location = new System.Drawing.Point(3, 84);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+=======
+            this.dataGridView1.Location = new System.Drawing.Point(18, 84);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+>>>>>>> 0a3a39eb62b2f0ef8cf9b6facb28208ab332245a
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowTemplate.Height = 23;
+<<<<<<< HEAD
             this.dataGridView1.Size = new System.Drawing.Size(1402, 915);
+=======
+            this.dataGridView1.Size = new System.Drawing.Size(1217, 681);
+>>>>>>> 0a3a39eb62b2f0ef8cf9b6facb28208ab332245a
             this.dataGridView1.TabIndex = 48;
             // 
             // importDate
@@ -205,8 +226,14 @@
             // 
             // Form5
             // 
+<<<<<<< HEAD
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1400, 962);
+=======
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1245, 743);
+>>>>>>> 0a3a39eb62b2f0ef8cf9b6facb28208ab332245a
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.sch_btn);
@@ -216,8 +243,11 @@
             this.Controls.Add(this.last_time);
             this.Controls.Add(this.label2);
             this.Name = "Form5";
+<<<<<<< HEAD
             this.Padding = new System.Windows.Forms.Padding(5, 60, 5, 5);
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
+=======
+>>>>>>> 0a3a39eb62b2f0ef8cf9b6facb28208ab332245a
             this.Text = "Form5";
             this.TransparencyKey = System.Drawing.Color.Black;
             this.Load += new System.EventHandler(this.Form5_Load);
