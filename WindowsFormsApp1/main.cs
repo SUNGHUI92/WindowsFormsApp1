@@ -50,14 +50,14 @@ namespace WindowsFormsApp1
         {
             this.Hide();
             login frm1 = new login();
-            frm1.ShowDialog();//2
+            frm1.ShowDialog();//8
         }
 
         private void metroTile6_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             Form2 form2 = new Form2();
-            form2.Show();//2
+            form2.Show();//9
         }
     }
 }
