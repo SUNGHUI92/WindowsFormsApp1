@@ -43,9 +43,9 @@ namespace WindowsFormsApp1
 
         private void metroTile2_Click(object sender, EventArgs e)
         {
-            //this.Visible = false;
+            this.Visible = false;
             //order Orderfrm = new order(); // order 폼 인스턴스 생성
-            SQLTest2.order orderForm = new SQLTest2.order();
+            order.order orderForm = new order.order();
             orderForm.Show(); // order 폼을 나타나게 함
         }
 

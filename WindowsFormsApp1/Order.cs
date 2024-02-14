@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 using MetroFramework.Controls;
 using System.IO;
 
-namespace SQLTest2
+namespace order
 {
     public partial class order : MetroFramework.Forms.MetroForm
     {
@@ -27,9 +27,9 @@ namespace SQLTest2
             InitializeComponent();
 			//dateTimePicker1.CustomFormat = "yyyy-MM-dd HH:mm:ss";
 			//dateTimePicker2.CustomFormat = "tt h: mm";
-			metroTextBox202.TextChanged += metroTextBox_TextChaned;
-			metroTextBox203.TextChanged += metroTextBox_TextChaned;
-			metroTextBox204.TextChanged += metroTextBox_TextChaned;
+			metroTextBox2.TextChanged += metroTextBox_TextChaned;
+			metroTextBox3.TextChanged += metroTextBox_TextChaned;
+			metroTextBox4.TextChanged += metroTextBox_TextChaned;
 			
 			_connectionAddress = string.Format("Server={0};Port={1};Database={2};Uid={3};Pwd={4}", _server, _port, _database, _id, _pw);
 		}
@@ -50,7 +50,7 @@ namespace SQLTest2
 
 		private void metroTextBox_TextChaned(object sender, EventArgs e) //품명 자동완성
 		{
-			metroTextBox205.Text = $"{metroTextBox202.Text} - {metroTextBox203.Text} {metroTextBox204.Text}";
+			metroTextBox5.Text = $"{metroTextBox2.Text} - {metroTextBox3.Text} {metroTextBox4.Text}";
 		}
 		
 		private void selectTable(string[] columnNames = null, string[] textBoxValues = null /* = "SELECT * FROM product"*/) //데이터 조회
@@ -147,7 +147,7 @@ namespace SQLTest2
 					//string date = DateTime.Now.ToString("F");
 					string date = dateTimePicker1.Text;
 					//string time = dateTimePicker2.Value.ToString("tt h: mm");
-					string insertQuery = "INSERT INTO product (수주일자, 제조사, 품종, 품목, 규격, 품명, 상품코드, 수량, 판정) VALUES ('" + date + "','" + metroTextBox201.Text + "','" + metroTextBox202.Text + "','" + metroTextBox203.Text + "','" + metroTextBox204.Text + "','" + metroTextBox205.Text + "','" + metroTextBox206.Text + "','" + metroTextBox207.Text + "','" + metroTextBox208.Text + "');";
+					string insertQuery = "INSERT INTO product (수주일자, 제조사, 품종, 품목, 규격, 품명, 상품코드, 수량, 판정) VALUES ('" + date + "','" + metroTextBox1.Text + "','" + metroTextBox2.Text + "','" + metroTextBox3.Text + "','" + metroTextBox4.Text + "','" + metroTextBox5.Text + "','" + metroTextBox6.Text + "','" + metroTextBox7.Text + "','" + metroTextBox8.Text + "');";
 					
 					DialogResult result = MessageBox.Show("수주를 추가하시겠습니까?", "수주추가", MessageBoxButtons.YesNo);
 
@@ -158,14 +158,14 @@ namespace SQLTest2
 						if (command.ExecuteNonQuery() != 1)
 							MessageBox.Show("Failed to insert data.");
 
-						metroTextBox201.Text = "";
-						metroTextBox202.Text = "";
-						metroTextBox203.Text = "";
-						metroTextBox204.Text = "";
-						metroTextBox205.Text = "";
-						metroTextBox206.Text = "";
-						metroTextBox207.Text = "";
-						metroTextBox208.Text = "";
+						metroTextBox1.Text = "";
+						metroTextBox2.Text = "";
+						metroTextBox3.Text = "";
+						metroTextBox4.Text = "";
+						metroTextBox5.Text = "";
+						metroTextBox6.Text = "";
+						metroTextBox7.Text = "";
+						metroTextBox8.Text = "";
 
 						selectTable();
 					}
@@ -193,7 +193,7 @@ namespace SQLTest2
 					int index = Convert.ToInt32(listView1.Items[pos].Text);
 					//accounts_table의 특정 id의 name column과 phone column 데이터를 수정합니다.
 					string updateQuery = string.Format("UPDATE product SET 제조사 = '{1}', 품종 = '{2}', 품목 = '{3}', 규격 = '{4}', 품명 = '{5}', 상품코드 = '{6}', 수량 = '{7}', 판정 = '{8}' WHERE No={0};", index, 
-						metroTextBox201.Text, metroTextBox202.Text, metroTextBox203.Text, metroTextBox204.Text, metroTextBox205.Text, metroTextBox206.Text, metroTextBox207.Text, metroTextBox208.Text);
+						metroTextBox1.Text, metroTextBox2.Text, metroTextBox3.Text, metroTextBox4.Text, metroTextBox5.Text, metroTextBox6.Text, metroTextBox7.Text, metroTextBox8.Text);
 
 					MySqlCommand command = new MySqlCommand(updateQuery, mysql);
 					if (command.ExecuteNonQuery() != 1)
@@ -235,14 +235,14 @@ namespace SQLTest2
 
         private void button207_Click(object sender, EventArgs e) //검색
         {
-			MetroTextBox[] textBoxes = { metroTextBox201, metroTextBox202, metroTextBox203, metroTextBox204, metroTextBox205, metroTextBox206, metroTextBox207, metroTextBox208 };
+			MetroTextBox[] textBoxes = { metroTextBox1, metroTextBox2, metroTextBox3, metroTextBox4, metroTextBox5, metroTextBox6, metroTextBox7, metroTextBox8 };
 
 			bool allEmpty = true;
 			foreach (MetroTextBox textBox in textBoxes)
 			{
 				if (!string.IsNullOrEmpty(textBox.Text))
 				{
-					string[] textBoxValues = {metroTextBox201.Text,metroTextBox202.Text,metroTextBox203.Text, metroTextBox204.Text, metroTextBox205.Text, metroTextBox206.Text, metroTextBox207.Text, metroTextBox208.Text };
+					string[] textBoxValues = {metroTextBox1.Text,metroTextBox2.Text,metroTextBox3.Text, metroTextBox4.Text, metroTextBox5.Text, metroTextBox6.Text, metroTextBox7.Text, metroTextBox8.Text };
 					// 나머지 텍스트박스에 대해서도 동일하게 추가
 
 					// 각 컬럼명을 배열로 저장
@@ -318,14 +318,14 @@ namespace SQLTest2
 			if (listView1.SelectedItems.Count != 0)
 			{
 				int SelectRow = listView1.SelectedItems[0].Index;
-				metroTextBox201.Text = listView1.Items[SelectRow].SubItems[2].Text;
-				metroTextBox202.Text = listView1.Items[SelectRow].SubItems[3].Text;
-				metroTextBox203.Text = listView1.Items[SelectRow].SubItems[4].Text;
-				metroTextBox204.Text = listView1.Items[SelectRow].SubItems[5].Text;
-				metroTextBox205.Text = listView1.Items[SelectRow].SubItems[6].Text;
-				metroTextBox206.Text = listView1.Items[SelectRow].SubItems[7].Text;
-				metroTextBox207.Text = listView1.Items[SelectRow].SubItems[8].Text;
-				metroTextBox208.Text = listView1.Items[SelectRow].SubItems[9].Text;
+				metroTextBox1.Text = listView1.Items[SelectRow].SubItems[2].Text;
+				metroTextBox2.Text = listView1.Items[SelectRow].SubItems[3].Text;
+				metroTextBox3.Text = listView1.Items[SelectRow].SubItems[4].Text;
+				metroTextBox4.Text = listView1.Items[SelectRow].SubItems[5].Text;
+				metroTextBox5.Text = listView1.Items[SelectRow].SubItems[6].Text;
+				metroTextBox6.Text = listView1.Items[SelectRow].SubItems[7].Text;
+				metroTextBox7.Text = listView1.Items[SelectRow].SubItems[8].Text;
+				metroTextBox8.Text = listView1.Items[SelectRow].SubItems[9].Text;
 			}
 		}
 
