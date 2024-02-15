@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using MetroFramework.Controls;
 using System.IO;
+using System.Runtime.InteropServices.ComTypes;
 
 namespace order
 {
@@ -25,8 +26,6 @@ namespace order
 		public order()
         {
             InitializeComponent();
-			//dateTimePicker1.CustomFormat = "yyyy-MM-dd HH:mm:ss";
-			//dateTimePicker2.CustomFormat = "tt h: mm";
 			metroTextBox2.TextChanged += metroTextBox_TextChaned;
 			metroTextBox3.TextChanged += metroTextBox_TextChaned;
 			metroTextBox4.TextChanged += metroTextBox_TextChaned;
@@ -60,8 +59,9 @@ namespace order
 				using (MySqlConnection mysql = new MySqlConnection(_connectionAddress))
 				{
 					mysql.Open();
-
-					bool allEmpty = true;
+                    string startDate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+                    string endDate = dateTimePicker2.Value.ToString("yyyy-MM-dd");
+                    bool allEmpty = true;
 
 					if (textBoxValues != null)
 					{
@@ -76,11 +76,12 @@ namespace order
 					}
 					else allEmpty = true;
 
-					string query = "SELECT * FROM product";
+                    string query = $"SELECT * FROM product WHERE 수주일자 BETWEEN '{startDate}' and '{endDate}'";
+                    
 
-					if (!allEmpty)
+                    if (!allEmpty)
 					{
-						query += " WHERE ";
+						//query += " WHERE ";
 
 						
 
@@ -90,20 +91,20 @@ namespace order
 							// 검색어가 비어있지 않은 경우에만 해당 컬럼에 대한 검색 조건 추가
 							if (!string.IsNullOrWhiteSpace(textBoxValues[i]))
 							{
-								query += $"{columnNames[i]} LIKE '%{textBoxValues[i]}%' OR ";
+								query += $" OR {columnNames[i]} LIKE '%{textBoxValues[i]}%'";
 								
 							}
 						}
 						// 마지막 OR 삭제
-						query = query.Remove(query.Length - 4);
+						//query = query.Remove(query.Length - 4);
 					}
 
 					string selectQuery = string.Format(query);
 
 					MySqlCommand command = new MySqlCommand(selectQuery, mysql);
 					MySqlDataReader table = command.ExecuteReader();
-
-					listView1.Items.Clear();
+					
+                    listView1.Items.Clear();
 
 					while (table.Read())
 					{
@@ -145,7 +146,7 @@ namespace order
 
 					mysql.Open();
 					//string date = DateTime.Now.ToString("F");
-					string date = dateTimePicker1.Text;
+					string date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
 					//string time = dateTimePicker2.Value.ToString("tt h: mm");
 					string insertQuery = "INSERT INTO product (수주일자, 제조사, 품종, 품목, 규격, 품명, 상품코드, 수량, 판정) VALUES ('" + date + "','" + metroTextBox1.Text + "','" + metroTextBox2.Text + "','" + metroTextBox3.Text + "','" + metroTextBox4.Text + "','" + metroTextBox5.Text + "','" + metroTextBox6.Text + "','" + metroTextBox7.Text + "','" + metroTextBox8.Text + "');";
 					
@@ -265,7 +266,7 @@ namespace order
 				using (MySqlConnection mysql = new MySqlConnection(_connectionAddress))
 				{
 					mysql.Open();
-					string date = dateTimePicker1.Text;
+					string date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
 					//string time = dateTimePicker2.Value.ToString("tt h: mm");
 					int pos = listView1.SelectedItems[0].Index;
 					int index = Convert.ToInt32(listView1.Items[pos].Text);
