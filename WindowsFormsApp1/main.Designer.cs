@@ -55,9 +55,10 @@ namespace WindowsFormsApp1
             this.metroTile1.ActiveControl = null;
             this.metroTile1.Cursor = System.Windows.Forms.Cursors.Default;
             this.metroTile1.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.metroTile1.Location = new System.Drawing.Point(385, 142);
+            this.metroTile1.Location = new System.Drawing.Point(440, 178);
+            this.metroTile1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(285, 285);
+            this.metroTile1.Size = new System.Drawing.Size(326, 356);
             this.metroTile1.TabIndex = 0;
             this.metroTile1.Text = "입고/출고 관리";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -72,9 +73,10 @@ namespace WindowsFormsApp1
             // metroTile2
             // 
             this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(685, 142);
+            this.metroTile2.Location = new System.Drawing.Point(783, 178);
+            this.metroTile2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(285, 285);
+            this.metroTile2.Size = new System.Drawing.Size(326, 356);
             this.metroTile2.TabIndex = 1;
             this.metroTile2.Text = "수주/발주 관리";
             this.metroTile2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -89,9 +91,10 @@ namespace WindowsFormsApp1
             // metroTile4
             // 
             this.metroTile4.ActiveControl = null;
-            this.metroTile4.Location = new System.Drawing.Point(985, 142);
+            this.metroTile4.Location = new System.Drawing.Point(1126, 178);
+            this.metroTile4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(285, 285);
+            this.metroTile4.Size = new System.Drawing.Size(326, 356);
             this.metroTile4.TabIndex = 3;
             this.metroTile4.Text = "재고 관리";
             this.metroTile4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -105,9 +108,10 @@ namespace WindowsFormsApp1
             // metroTile3
             // 
             this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(385, 443);
+            this.metroTile3.Location = new System.Drawing.Point(440, 554);
+            this.metroTile3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(285, 285);
+            this.metroTile3.Size = new System.Drawing.Size(326, 356);
             this.metroTile3.TabIndex = 6;
             this.metroTile3.Text = "품질관리";
             this.metroTile3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -122,9 +126,10 @@ namespace WindowsFormsApp1
             // metroTile5
             // 
             this.metroTile5.ActiveControl = null;
-            this.metroTile5.Location = new System.Drawing.Point(685, 443);
+            this.metroTile5.Location = new System.Drawing.Point(783, 554);
+            this.metroTile5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(285, 285);
+            this.metroTile5.Size = new System.Drawing.Size(326, 356);
             this.metroTile5.TabIndex = 7;
             this.metroTile5.Text = "모니터링";
             this.metroTile5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -134,13 +139,15 @@ namespace WindowsFormsApp1
             this.metroTile5.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.metroTile5.UseSelectable = true;
             this.metroTile5.UseTileImage = true;
+            this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click_1);
             // 
             // metroTile6
             // 
             this.metroTile6.ActiveControl = null;
-            this.metroTile6.Location = new System.Drawing.Point(985, 443);
+            this.metroTile6.Location = new System.Drawing.Point(1126, 554);
+            this.metroTile6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(285, 285);
+            this.metroTile6.Size = new System.Drawing.Size(326, 356);
             this.metroTile6.TabIndex = 8;
             this.metroTile6.Text = "사용자관리";
             this.metroTile6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -157,9 +164,9 @@ namespace WindowsFormsApp1
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(22, 115);
+            this.label1.Location = new System.Drawing.Point(25, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 24);
+            this.label1.Size = new System.Drawing.Size(137, 30);
             this.label1.TabIndex = 10;
             this.label1.Text = "중요알림";
             // 
@@ -167,19 +174,21 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(23, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 41);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.pictureBox1.Size = new System.Drawing.Size(70, 69);
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(0, 0, 34, 0);
+            this.pictureBox1.Size = new System.Drawing.Size(80, 86);
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
             // metroTile7
             // 
             this.metroTile7.ActiveControl = null;
-            this.metroTile7.Location = new System.Drawing.Point(22, 142);
+            this.metroTile7.Location = new System.Drawing.Point(25, 178);
+            this.metroTile7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.metroTile7.Name = "metroTile7";
-            this.metroTile7.Size = new System.Drawing.Size(324, 586);
+            this.metroTile7.Size = new System.Drawing.Size(370, 732);
             this.metroTile7.TabIndex = 12;
             this.metroTile7.Text = "metroTile7";
             this.metroTile7.UseSelectable = true;
@@ -187,18 +196,20 @@ namespace WindowsFormsApp1
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(112, -3);
+            this.pictureBox3.Location = new System.Drawing.Point(128, -4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(44, 44);
+            this.pictureBox3.Size = new System.Drawing.Size(50, 55);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(3, 12);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 15);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(103, 34);
+            this.pictureBox4.Size = new System.Drawing.Size(118, 42);
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
@@ -206,9 +217,10 @@ namespace WindowsFormsApp1
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(185, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(211, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(44, 44);
+            this.pictureBox2.Size = new System.Drawing.Size(50, 55);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
@@ -218,18 +230,19 @@ namespace WindowsFormsApp1
             this.panel13.Controls.Add(this.pictureBox2);
             this.panel13.Controls.Add(this.pictureBox4);
             this.panel13.Controls.Add(this.pictureBox3);
-            this.panel13.Location = new System.Drawing.Point(985, 58);
+            this.panel13.Location = new System.Drawing.Point(1126, 72);
+            this.panel13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(285, 44);
+            this.panel13.Size = new System.Drawing.Size(326, 55);
             this.panel13.TabIndex = 13;
             // 
-            // Form1
+            // main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1280, 800);
+            this.ClientSize = new System.Drawing.Size(1463, 1000);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.metroTile7);
             this.Controls.Add(this.pictureBox1);
@@ -240,7 +253,9 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.metroTile4);
             this.Controls.Add(this.metroTile2);
             this.Controls.Add(this.metroTile1);
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "main";
+            this.Padding = new System.Windows.Forms.Padding(23, 75, 23, 25);
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

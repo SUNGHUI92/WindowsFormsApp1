@@ -59,5 +59,12 @@ namespace WindowsFormsApp1
             Form2 form2 = new Form2();
             form2.Show();//2
         }
+
+        private void metroTile5_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form13 form13 = new Form13();
+            form13.Show();//13
+        }
     }
 }
